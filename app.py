@@ -8,7 +8,7 @@ HF_TOKEN = os.getenv("HF_TOKEN")
 
 client = InferenceClient(token=HF_TOKEN)
 
-st.title("🌿 Plant Identifier (FINAL Stable Fix)")
+st.title("🌿 Plant Identifier")
 
 uploaded_file = st.file_uploader("Upload plant image", type=["jpg", "png", "jpeg"])
 
