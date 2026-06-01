@@ -22,7 +22,7 @@ if uploaded_file:
 
             response = client.image_classification(
                 model="google/vit-base-patch16-224",
-                image=uploaded_file.getvalue()
+                image=image
             )
 
         st.subheader("🌱 Prediction")
