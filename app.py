@@ -21,12 +21,12 @@ if uploaded_file:
 
         with st.spinner("Analyzing plant..."):
 
-            # FINAL FIX: write temp file
+            # write temp file
             with tempfile.NamedTemporaryFile(delete=False, suffix=".jpg") as tmp:
                 tmp.write(uploaded_file.getvalue())
                 tmp_path = tmp.name
 
-            # PASS FILE PATH (MOST RELIABLE METHOD)
+            # PASS FILE PATH
             response = client.image_classification(
                 model="google/vit-base-patch16-224",
                 image=tmp_path
